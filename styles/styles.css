@@ -1,0 +1,223 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    --lightblue: #E0E8FF;
+    --white: #fff;
+    --darkblue: #1F2E55;
+    --bluegray: #717FA6;
+    --blue: #382AE1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Red Hat Display';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightblue);
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 0 5px;
+}
+
+.component {
+    background-color: var(--white);
+    max-width: 450px;
+    width: 100%;
+    height: 697px;
+    border-radius: 20px;
+    box-shadow: 0px 40px 40px rgba(13, 48, 189, 0.15);
+    display: flex;
+    gap: 45px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.image {
+    background-image: url('../images/illustration-hero.svg');
+    width: 100%;
+    height: 220px;
+    border-radius: 20px 20px 0px 0px;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.info {
+    text-align: center;
+    padding: 0 48px;
+}
+
+.info .text h1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--darkblue);
+    margin-bottom: 17px;
+}
+
+.info .text p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bluegray);
+    margin-bottom: 20px;
+}
+
+.info .plan {
+    background-color: #F7F9FF;
+    width: 100%;
+    height: 98px;
+    border-radius: 11px;
+    padding: 25px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.info .plan .part {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info .plan .part .price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info .plan .part .price h3 {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--darkblue);
+}
+
+.info .plan .part .price span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bluegray);
+}
+
+.info .plan button {
+    font-family: 'Red Hat Display';
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: var(--blue);
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.info .plan button:hover {
+    color: rgba(119, 108, 241, 0.73);
+    text-decoration: none;
+}
+
+.info .payment {
+    outline: none;
+    border: 0;
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: 'Red Hat Display';
+    font-size: 15px;
+    font-weight: 900;
+    width: 100%;
+    height: 50px;
+    border-radius: 11px;
+    cursor: pointer;
+    box-shadow: 0px 20px 20px rgba(13, 48, 189, 0.2);
+    margin-bottom: 32px;
+    transition: all .5s;
+}
+
+.info .payment:hover {
+    background-color: #766CF1;
+}
+
+.info .cancel {
+    outline: none;
+    border: 0;
+    background: transparent;
+    font-family: 'Red Hat Display';
+    color: var(--bluegray);
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.info .cancel:hover {
+    color: var(--darkblue);
+}
+
+@media (max-width: 400px) {
+    body {
+        background-image: url('../images/pattern-background-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .component {
+        max-width: 327px;
+        height: 567px;
+        gap: 32px;
+    }
+
+    .image {
+        height: 160px;
+    }    
+
+    .info {
+        padding: 0 24px;
+    }
+    
+    .info .text h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    
+    .info .text p {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        padding: 0 8px;
+    }
+
+    .info .plan {
+        height: 81px;
+        padding: 17px 16px;
+        margin-bottom: 24px;
+    }
+    
+    .info .plan .part .price {
+        gap: 3px;
+    }
+    
+    .info .plan .part .price h3 {
+        font-size: 14px;
+    }
+    
+    .info .plan .part .price span {
+        font-size: 14px;
+    }
+
+    .info .plan button {
+        font-size: 13px;
+    }    
+
+    .info .payment {
+        margin-bottom: 24px;
+    }
+}
